@@ -27,7 +27,7 @@ If you do decide use the glow effect, you do so at your own risk. Bring your Sun
 ### To enable the glow
 As of v0.1.0, external extensions are no longer needed to active the glow. 
 
-Firstly, if you are a Windows user, you may need to run VS Code with administrator priviliges. For Linux and Mac users, Code must not be installed in a read-only location and you must have write permissions.
+Firstly, if you are a Windows user, you may need to run VS Code with administrator privileges. For Linux and Mac users, Code must not be installed in a read-only location and you must have write permissions.
 
 If you have been using Synthwave prior to v0.1.0, you will likely have used the Custom CSS and JS extension to enable the glow. Before enabling Neon Dreams, you will need to disable the prior method. You can do this by pressing `Ctrl + Shift + P` or `Shift + ⌘ + P` and choose "__Disable Custom CSS and JS__"
 
@@ -38,7 +38,7 @@ Note: In the name of simplifying the install process and mitigating update-relat
 #### To customise the glow brightness
 In your `settings.json` add the key:
 ```
-"synthwave84.brightness": "0.45"
+"synthwave84.brightness": 0.45
 ```
 The value should be a _float value_ from 0 to 1, where 0.0 is fully transparent. The default brightness is 0.45. To avoid eye strain, avoid using higher brightness values for extended periods of time. 
 
@@ -52,6 +52,11 @@ In your `settings.json` add the key:
 "synthwave84.disableGlow": true
 ```
 To see the changes, you need to rerun the activation function. Open your command palette with `Ctrl + Shift + P` or `Shift + ⌘ + P` and choose "__Enable Neon Dreams__".
+
+### To remove corruption warning and [unsupported] from title-bar
+Because enabling the glow modifies core files, VS code will interpret this as the core being 'corrupted' and you may see an error message on restarting your editor. You can safely dismiss this message, or remove it entirely with the [Fix VSCode Checksums](https://marketplace.visualstudio.com/items?itemName=lehni.vscode-fix-checksums 'Fix VSCode Checksums') extension.
+
+Upon installation of 'Fix VSCode Checksums', open the command palette and execute `Fix Checksums: Apply`. You will need to completely restart VSCode after execution, reopening without fully exiting might not be enough.
 
 ## Updates
 Every time you update VS code, you will need to repeat this step to re-enable the glow.
